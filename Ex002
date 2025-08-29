@@ -1,1 +1,90 @@
-import java.util.Scanner
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        
+        //Recolher os números a serem usados.
+        System.out.println("Primeiro numero");
+        double Num1 = scan.nextDouble();
+        
+        System.out.println("Segundo numero");
+        double Num2 = scan.nextDouble();
+        
+        // Operações básicas mais log, raiz quadrada e cúbica, número elevado e seno.
+        System.out.println("Escolha o sinal abaixo");
+        System.out.println("1 - Soma");
+        System.out.println("2 - Subtração");
+        System.out.println("3 - Multiplicação");
+        System.out.println("4 - Divisão");
+        System.out.println("5 - Raiz Quad.");
+        System.out.println("6 - Raiz Cub.");
+        System.out.println("7 - Logaritmo");
+        System.out.println("8 - Número elevado");
+        System.out.println("9 - Seno");
+        
+        char Oper = scan.next().charAt(0); // Pega o primeiro caractere escrito.
+        
+        double result;
+        
+        //Criar as operações básicas
+        switch (Oper){
+            case '1': //soma
+                result = Num1 + Num2;
+                break;
+            case '2': //Subtração
+                result = Num1 - Num2;
+                break;
+            case '3': //Multi
+                result = Num1 * Num2;
+                break;
+            case '4': //Div
+                if (Num2 == 0){
+                    System.out.println("Não dá. Divisor zero");
+                    return;
+                }
+                result = Num1 / Num2;
+                break;
+            case '5': //Raiz Quad. dos dois numeros separados.
+                result = Math.sqrt(Num1);
+                System.out.println("A raiz de " + Num1 + " é " + result);
+                result = Math.sqrt(Num2);
+                System.out.println("A raiz de " + Num2 + " é " + result);
+                return;// Encerra o código
+            case '6': //Raiz Cub. dos dois numeros separados.
+                result = Math.cbrt(Num1);
+                System.out.println("A raiz cubica de " + Num1 + " é " + result);
+                result = Math.cbrt(Num2);
+                System.out.println("A raiz cubica de " + Num2 + " é " + result);
+                return; //Encerra o código
+            case '7': //Logaritmo
+                result = Math.log(Num1);
+                System.out.println("O log de " + Num1 + " é " + result);
+                result = Math.log(Num2);
+                System.out.println("O log de " + Num2 + " é " + result);
+                return;
+            case '8': //Numero elevado
+                System.out.println("Numero de elevação");
+                int el = scan.nextInt();
+                
+                result = Math.pow(Num1, el);
+                System.out.println("O resultado da operação é: " + result);
+                result = Math.pow(Num2, el);
+                System.out.println("O resultado da operação é: " + result);
+                return;
+            case '9': //Numero de Seno
+                result = Math.sin(Num1);
+                System.out.println("O seno de " + Num1 + " é " + result);
+                result = Math.sin(Num2);
+                System.out.println("O seno de " + Num2 + " é " + result);
+                return;
+            default: //Se alguma não bater, aqui acusa.
+                System.out.println("Erro. Acha aí o problema.");
+                return;
+        }
+        
+        System.out.println(result);
+        
+	}
+}
