@@ -1,1 +1,27 @@
 // Ler e contar quantos caracteres possui. Quantas palavras possui e quantas vezes cada palavra possui.
+
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        
+        //Receber a palavra.
+        
+        System.out.println("Digite a frase.");
+        String texto = scan.nextLine();// Ler a proxima linha.
+        String frase = texto;
+        
+        int contagem = frase.length();// Contar os caracteres.
+        
+      +  String[] palavra = frase.trim().split("\\s+");//Contas as palavras.
+        
+      +  //() sempre que for função.
+      +  int quant = frase.length(); 
+        
+        //System.out.println("Possui " +contagem+ " caracteres.");
+      +  System.out.println("Possui " +quant+ " palavras.");
+      +  System.out.println(palavra)
+	}
+}
