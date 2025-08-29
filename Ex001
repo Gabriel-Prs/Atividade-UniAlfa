@@ -1,1 +1,45 @@
+import java.util.Scanner;
 
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+	    
+	    // Pegue dois números mais um sinal de operando e tire seu resultado. 
+        System.out.print("Digite um número:");
+        double num1 = scan.nextDouble();
+	    
+        System.out.print("Digite outro número:");
+        double num2 = scan.nextDouble();
+	    
+        System.out.print("Digite o operando a ser utilizado(+, -, *, /): ");
+        char oper = scan.next().charAt(0);// Pegar a primeira letra (0) do próximo caractere.
+        double result;
+	    
+	    // Verificar o valor de Oper e definir condição 
+        switch (oper) {
+            case '+':
+                result = num1 + num2;
+                break; 
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 == 0){
+                    System.out.println("Divisão por zero");
+                    return;
+                }
+                result = num1 / num2;
+                break;
+            default:
+                System.out.println("Erro na operação");
+                return;
+        }
+        
+        System.out.print("O resultado é: " + result);
+		
+	}
+}
