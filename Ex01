@@ -1,27 +1,62 @@
-// Ler e contar quantos caracteres possui. Quantas palavras possui e quantas vezes cada palavra possui.
+// Ler e contar quantos caracteres uma frase possui. Quantas palavras possui e quantas vezes uma palavra aparece.
 
 import java.util.Scanner;
 
-public class Main
-{
-    public static void main(String[] args) {
+public class Main {
+    //Criar uma função que conte as palavras.
+    public static int contarPalavras (String frase){
+        String [] palavras = frase.trim().split("\\s+");
+        return palavras.length;// Contar as palavras de uma varivel separadamente.
+    }       
+    //Criar uma função que conte os caracteres.
+    
+    public static int contarCaracteres ( String frase)
+    {
+        String palavras = frase.replaceAll("\\s+","");
+        return palavras.length();
+    }
+    //Criar uma função que conte as palavras repetidas.
+    
+    public static int palavrasRepetidas (String frase, String palavra){
+        if (frase == null || palavra == null || palavra.isEmpty()){
+            return 0;
+        }
+        
+        String [] palavras = frase.trim().split("\\s+");
+        int contagem = 0;
+        
+        //Para cada elemento, contar mais um.
+        for ( String p : palavras){
+            if (p.equalsIgnoreCase(palavra)){
+                contagem++;
+            }
+        }
+        
+        return contagem; 
+    }
+
+
+    public static void main (String[] args){
         Scanner scan = new Scanner (System.in);
         
         //Receber a palavra.
-        
         System.out.println("Digite a frase.");
         String texto = scan.nextLine();// Ler a proxima linha.
-        String frase = texto;
         
-        int contagem = frase.length();// Contar os caracteres.
+        System.out.println("Digite a frase.");
+        String palavra = scan.nextLine();
         
-      +  String[] palavra = frase.trim().split("\\s+");//Contas as palavras.
+        int contagem = contarCaracteres(texto);
         
-      +  //() sempre que for função.
-      +  int quant = frase.length(); 
+        int quantidade = contarPalavras(texto);
         
-        //System.out.println("Possui " +contagem+ " caracteres.");
-      +  System.out.println("Possui " +quant+ " palavras.");
-      +  System.out.println(palavra)
-	}
+        int sequence = palavrasRepetidas(texto, palavra);
+        
+        System.out.println("Possui " +contagem+ " caracteres.");
+        System.out.println("Possui " +quantidade+ " palavras.");
+        System.out.println("A palavra "+palavra+ " aparece " +sequence+ " vezes.");
+        
+    
+    }
+  
 }
