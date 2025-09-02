@@ -1,0 +1,26 @@
+//Calcule o produto de três inteiros. O usuário deve entrar com os números;
+//Calcule o IMC (peso/altura*altura);
+//Mostre a versão do Java instalada em seu computador;
+//Execute e analise o programa Iteracoes.java;
+
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner scan = new Scanner (System.in);
+	    
+		System.out.println("Digite seu peso.");
+		float peso = scan.nextFloat();
+		
+		System.out.println("Digite sua altura.");
+		float altura = scan.nextFloat();
+		
+		float h = altura*altura;
+		float IMC = peso/h;
+		
+		
+		System.out.println("Seu Indice de Massa Corporea é: "+IMC);
+		
+	}
+}
