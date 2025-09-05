@@ -1,0 +1,58 @@
+class Animal{
+    //Criar atributos
+    public String nome;
+    public String raca;
+    public Double peso;
+    
+    public void emitirSom(){
+        System.out.println("O animal faz seu som próprio.");
+    }
+}
+
+class Cachorro extends Animal {
+    public void emitirSom(){
+        System.out.println("O cachorro late: Au Au!");
+    }
+}
+
+class Gato extends Animal {
+    public void emitirSom(){
+        System.out.println("O gato mia: Miau!");
+    }
+}
+
+class Camelo extends Animal {
+    public void emitirSom(){
+        System.out.println("O camelo sla, come cacto.");
+    }
+}
+
+class Cavalo extends Animal {
+    public void emitirSom(){
+        System.out.println("O cavalo relincha: Innrraaa!");
+    }
+}
+
+class Tubarao extends Animal {
+    public void emitirSom(){
+        System.out.println("O tubarão faz tuuru, tuuru!");
+    }
+}
+
+//Criar a classe principal e emitindo os atributos.
+public class Heranca{
+    public static void (String[] args){
+        Animal a = new Animal();
+        a.emitirSom();
+        
+        Cachorro c = new Cachorro();
+        c.nome = "Rex";
+        c.raca = "Pinscher";
+        c.peso = "4kg";
+        c.emitirSom;
+        
+        System.out.println("O nome do cachorro é " +c.nome+ " é da raça " +c.raca+ " e seu peso é "+c.peso);
+        
+    }
+}
+ 
