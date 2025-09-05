@@ -1,0 +1,9 @@
+//Identificar versão do Java
+public class Main
+{
+	public static void main(String[] args) {
+		//Obter versão do Java
+		String javaVersion = System.getProperty("java.version");
+		System.out.println("Versão do Java: " +javaVersion);
+	}
+}
