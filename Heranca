@@ -9,6 +9,7 @@ class Animal{
     }
 }
 
+//Criar o Som de cada animal.
 class Cachorro extends Animal {
     public void emitirSom(){
         System.out.println("O cachorro late: Au Au!");
@@ -35,24 +36,49 @@ class Cavalo extends Animal {
 
 class Tubarao extends Animal {
     public void emitirSom(){
-        System.out.println("O tubarão faz tuuru, tuuru!");
+        System.out.println("Entre aqui e veja o som dele: https://www.youtube.com/watch?v=BWm7cpHv1ZU&list=RDBWm7cpHv1ZU&start_radio=1");
     }
 }
 
 //Criar a classe principal e emitindo os atributos.
 public class Heranca{
-    public static void (String[] args){
+    public static void main (String[] args){
         Animal a = new Animal();
         a.emitirSom();
         
         Cachorro c = new Cachorro();
         c.nome = "Rex";
         c.raca = "Pinscher";
-        c.peso = "4kg";
-        c.emitirSom;
+        c.peso = 4.0;
+        c.emitirSom();
         
-        System.out.println("O nome do cachorro é " +c.nome+ " é da raça " +c.raca+ " e seu peso é "+c.peso);
+        System.out.println("O nome do cachorro é, " +c.nome+ " é da raça " +c.raca+ " e seu peso é "+c.peso+ " kg.");
+        
+        Gato g = new Gato();
+        g.nome = "Garfiel";
+        g.raca = "Persa";
+        g.peso = 2.0;
+        g.emitirSom();
+        
+        System.out.println("O nome do gato é, " +g.nome+ " é da raça " +g.raca+ " e seu peso é "+g.peso+ " kg.");
+        
+        Camelo ca = new Camelo();
+        ca.nome = "Melma";
+        ca.raca = "Kharai Camel";
+        ca.peso = 547.92;
+        ca.emitirSom();
+        
+        System.out.println("O nome do camelo é, " +ca.nome+ " é da raça " +ca.raca+ " e seu peso é "+ca.peso+ " kg.");
+        
+        Tubarao t = new Tubarao();
+        t.nome = "Bruce";
+        t.raca = "Tubarão Branco";
+        t.peso = 2832.34;
+        t.emitirSom();
+        
+        System.out.println("O nome do Tubarão é, " +t.nome+ " é da raça " +t.raca+ " e seu peso é "+t.peso+ " kg.");
         
     }
 }
+ 
  
