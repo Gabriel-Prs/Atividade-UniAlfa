@@ -1,7 +1,5 @@
 //Calcule o produto de três inteiros. O usuário deve entrar com os números;
 //Calcule o IMC (peso/altura*altura);
-//Mostre a versão do Java instalada em seu computador;
-//Execute e analise o programa Iteracoes.java;
 
 import java.util.Scanner;
 
