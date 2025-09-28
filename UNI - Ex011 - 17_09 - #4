@@ -1,0 +1,63 @@
+//Usando a classe JOptionPane para entrada de dados, elabore uma classe que receba a nota de duas provas e de um trabalho. Calcule e mostre a 
+média e o resultado final (aprovado ou reprovado). Para calcular a média utilize a fórmula seguinte: média = (nota da prova 1 + nota da prova 
+2 + nota do trabalho)/3. Considere que a média mínima para aprovação é 6.
+
+//Usando a classe JOptionPane para entrada de dados, elabore uma classe que receba a nota de duas provas e de um trabalho. Calcule e mostre a média e o resultado final (aprovado ou reprovado). Para calcular a média utilize a fórmula seguinte: média = (nota da prova 1 + nota da prova 2 + nota do trabalho)/3. Considere que a média mínima para aprovação é 6.
+
+import javax.swing.JOptionPane;
+
+public class MediaAluno {
+    public static void main(String[] args) {
+        try {
+            // Entrada das notas usando JOptionPane
+            String prova1Str = JOptionPane.showInputDialog("Digite a nota da primeira prova:");
+            String prova2Str = JOptionPane.showInputDialog("Digite a nota da segunda prova:");
+            String trabalhoStr = JOptionPane.showInputDialog("Digite a nota do trabalho:");
+
+            // Verifica se o usuário cancelou alguma entrada
+            if (prova1Str == null || prova2Str == null || trabalhoStr == null) {
+                JOptionPane.showMessageDialog(null,
+                        "Operação cancelada pelo usuário.",
+                        "Cancelado",
+                        JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
+
+            // Substitui vírgula por ponto e converte para double
+            double prova1 = Double.parseDouble(prova1Str.replace(",", "."));
+            double prova2 = Double.parseDouble(prova2Str.replace(",", "."));
+            double trabalho = Double.parseDouble(trabalhoStr.replace(",", "."));
+
+            // Validação das notas
+            if (!notaValida(prova1) || !notaValida(prova2) || !notaValida(trabalho)) {
+                JOptionPane.showMessageDialog(null,
+                        "Erro: Todas as notas devem estar entre 0 e 10.",
+                        "Nota inválida",
+                        JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            // Cálculo da média
+            double media = (prova1 + prova2 + trabalho) / 3.0;
+            String mediaStr = String.format("%.2f", media);
+            String resultado = media >= 6.0 ? "Aprovado" : "Reprovado";
+
+            // Exibição do resultado
+            JOptionPane.showMessageDialog(null,
+                    "Média: " + mediaStr + "\nResultado final: " + resultado,
+                    "Resultado do Aluno",
+                    JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null,
+                    "Erro: Entrada inválida. Digite apenas números válidos (use vírgula ou ponto para decimais).",
+                    "Erro de Entrada",
+                    JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    // Método auxiliar para validar nota entre 0 e 10
+    private static boolean notaValida(double nota) {
+        return nota >= 0 && nota <= 10;
+    }
+}
