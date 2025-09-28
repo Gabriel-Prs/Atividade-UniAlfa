@@ -1,0 +1,53 @@
+//O Imposto sobre a Transmissão de Bens Imóveis (ITBI) é aplicado sobre o valor de um imóvel a ser negociado. A base de cálculo 
+do ITBI (o valor a ser considerado no cálculo) será o maior valor entre o valor de transação (o valor negociado) e o valor venal 
+de referência (fornecido pela Prefeitura). Com base nisso, elabore uma classe que receba o valor da transação, o valor venal e 
+o percentual de imposto. Após isso, encontre o maior valor e aplique o percentual sobre ele. Ao final, apresente o valor do 
+imposto a ser pago. Observação: o valor do imposto a ser pago é calculado por meio da fórmula: valor do imposto = maior 
+valor * percentual / 100. Para entrada e saída de dados utilize a classe JOptionPane.
+
+import java.util.Scanner;
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class ITBI {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        try {
+            // Entrada dos dados
+            System.out.print("Digite o valor da transação do imóvel: ");
+            double valorTransacao = scan.nextDouble();
+
+            System.out.print("Digite o valor venal de referência do imóvel: ");
+            double valorVenal = scan.nextDouble();
+
+            System.out.print("Digite o percentual do ITBI (%): ");
+            double percentual = scan.nextDouble();
+
+            // Validação dos valores
+            if (valorTransacao <= 0 || valorVenal <= 0 || percentual <= 0) {
+                System.out.println("Erro: Todos os valores devem ser positivos e maiores que zero.");
+                return;
+            }
+
+            // Cálculo da base de cálculo e do imposto
+            double baseCalculo = Math.max(valorTransacao, valorVenal);
+            double valorImposto = baseCalculo * percentual / 100.0;
+
+            // Formatação dos valores como moeda brasileira
+            NumberFormat formatoMoeda = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+            String baseStr = formatoMoeda.format(baseCalculo);
+            String impostoStr = formatoMoeda.format(valorImposto);
+
+            // Exibição dos resultados
+            System.out.println("\n--- Resultado do Cálculo do ITBI ---");
+            System.out.println("Base de cálculo considerada: " + baseStr);
+            System.out.println("Valor do imposto a ser pago: " + impostoStr);
+
+        } catch (Exception e) {
+            System.out.println("Erro de entrada: Certifique-se de digitar apenas números válidos.");
+        } finally {
+            scan.close();
+        }
+    }
+}
