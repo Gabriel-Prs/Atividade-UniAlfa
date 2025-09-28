@@ -1,0 +1,46 @@
+Questões sobre Herança e Encapsulamento em Java.
+
+1. Em Java, qual palavra-chave é usada para indicar que uma classe herda de outra?
+R- c) extends 
+
+2. Qual palavra-chave permite que uma classe acesse a implementação da sua superclasse?
+R- b) super
+
+3. Em Java, uma classe pode herdar de quantas superclasses diretamente?
+R- a) Apenas 1
+
+4. O que significa encapsulamento em Java?
+R- c) Proteção dos atributos através de modificadores de acesso e métodos
+
+5. Qual modificador de acesso permite que um atributo seja acessado apenas dentro da própria classe?
+R- c) private
+
+6. O modificador de acesso protected permite acesso:
+R- c) Na mesma classe, no mesmo pacote e por subclasses
+
+7. Em herança, se uma subclasse precisa chamar o construtor da superclasse, qual palavra-chave deve ser usada?
+R- b) super()
+
+8. O que acontece se uma classe filha define um método com a mesma assinatura de um método da classe pai?
+R- b) Sobrescrita (overriding)
+
+9. Em relação à herança, qual é a diferença entre extends e implements?
+R- a) extends é usado para herdar classes, implements para interfaces
+
+10. Se um atributo é declarado como private, como ele pode ser acessado por outras classes?
+R- b) Através de métodos públicos getters e setters
+
+11. Uma classe declarada como final:
+R- b) Não pode ser herdada
+
+12. Em Java, qual anotação é usada para indicar que um método sobrescreve um da superclasse?
+R- a) @Override
+
+13. É possível herdar múltiplas classes diretamente em Java?
+R- c) Não, apenas uma classe pode ser herdada diretamente
+
+14. O encapsulamento promove qual dos seguintes benefícios?
+R- b) Segurança e controle sobre os dados da classe
+
+15. Qual dos seguintes é um exemplo correto de herança em Java?
+R- a) class Car extends Vehicle { }
