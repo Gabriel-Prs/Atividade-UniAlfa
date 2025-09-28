@@ -1,0 +1,66 @@
+### Questões sobre Java (AWT, Swing e JavaFX)
+
+*1.* O que significa a sigla AWT em Java?
+a) Abstract Window Toolkit
+
+
+*2.* Qual classe do AWT representa uma janela principal?
+a) Frame
+
+
+*3.* No AWT, qual componente é utilizado para capturar entrada de texto de uma única linha?
+
+b) TextField
+
+
+*4.* Em Swing, todos os componentes são derivados de qual classe base?
+
+b) JComponent
+
+*5.* Qual é a diferença principal entre AWT e Swing?
+
+b) Swing é baseado em AWT, mas é leve e mais personalizável
+
+
+*6.* Em Swing, qual componente representa uma caixa de seleção (checkbox)?
+a) JCheckBox
+
+
+*7.* O método setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) em um JFrame define:
+
+b) A ação ao clicar no botão de fechar
+
+
+*8.* Em JavaFX, qual classe é obrigatória para iniciar uma aplicação gráfica?
+a) Application
+
+
+*9.* Em JavaFX, o objeto *Stage* representa:
+a) Um container de elementos gráficos (janela principal)
+
+
+*10.* No JavaFX, qual é o papel da classe *Scene*?
+
+b) Definir a estrutura e os elementos exibidos no Stage
+
+
+*11.* Para criar uma aplicação JavaFX, qual método da classe Application deve ser sobrescrito?
+a) start(Stage primaryStage)
+
+
+*12.* No Swing, qual layout organiza componentes em linha, da esquerda para a direita?
+a) FlowLayout
+
+
+*13.* Em JavaFX, qual pacote contém os controles de interface (como Button, Label, TextField)?
+
+b) javafx.scene.control
+
+
+*14.* Qual destes é um exemplo de evento em JavaFX?
+a) ActionEvent
+
+
+*15.* Qual biblioteca Java foi criada mais recentemente para GUIs e substitui gradualmente Swing e AWT?
+
+b) JavaFX
