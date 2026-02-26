@@ -1,0 +1,19 @@
+#NIVEL 1
+
+lista = [5, 9, 30, 457, 6]
+
+#Exercicio 1
+print(f"O maior é {max(lista)}")
+print(f"O menor é {min(lista)}")
+
+#Exercicio 2
+media = sum(lista)/len(lista)
+print(f"{media} é a media dos elementos")
+
+#Exercicio 3
+lista.append(20)
+print(lista)
+
+#Exercicio 4
+lista.insert(2, 50000)
+print(lista)
