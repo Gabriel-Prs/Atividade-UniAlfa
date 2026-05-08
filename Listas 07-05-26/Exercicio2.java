@@ -1,28 +1,20 @@
-import java.util.LinkedList;
-import java.util.Queue;
+/*Soma de Números*/
+import java.util.ArrayList;
+import java.util.List;
 
 public class Exercicio2 {
     public static void main(String[] args) {
-        Queue<String> clientes = new LinkedList<>();
+        List<Integer> numeros = new ArrayList<>();
 
-        clientes.offer("João");
-        clientes.offer("Maria");
-        clientes.offer("Pedro");
-        clientes.offer("Ana");
-        clientes.offer("Carlos");
-
-        System.out.println("Fila inicial: " + clientes);
-        System.out.println();
-
-        int atendidos = 0;
-        while (!clientes.isEmpty()) {
-            String atendido = clientes.poll();
-            System.out.println("Atendendo: " + atendido);
-            atendidos++;
+        for (int i = 1; i <= 10; i++) {
+            numeros.add(i);
         }
 
-        System.out.println();
-        System.out.println("Total de clientes atendidos: " + atendidos);
-        System.out.println("Fila final: " + clientes);
+        int soma = 0;
+        for (int numero : numeros) {
+            soma += numero;
+        }
+
+        System.out.println("A soma dos números é: " + soma);
     }
 }

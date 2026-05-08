@@ -1,19 +1,18 @@
-import java.util.LinkedList;
-import java.util.Queue;
+/*Lista de Cores*/
+import java.util.ArrayList;
+import java.util.List;
 
 public class Exercicio1 {
     public static void main(String[] args) {
-        Queue<Integer> fila = new LinkedList<>();
+        List<String> cores = new ArrayList<>();
+        cores.add("Vermelho");
+        cores.add("Azul");
+        cores.add("Verde");
+        cores.add("Amarelo");
+        cores.add("Roxo");
 
-        fila.offer(1);
-        fila.offer(2);
-        fila.offer(3);
-        fila.offer(4);
-        fila.offer(5);
-
-        while (!fila.isEmpty()) {
-            Integer numero = fila.poll();
-            System.out.println(numero);
+        for (String cor : cores) {
+            System.out.println(cor);
         }
     }
 }
